@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>123.hp.com Install — Your Complete Beginner's Roadmap to HP Printer Setup</title>
+<style>
+  :root{
+    --ink:#1c2b3a;
+    --paper:#f6f4ee;
+    --hp-blue:#0f6cbd;
+    --hp-blue-deep:#0a4d8c;
+    --accent:#e0622f;
+    --line:#d8d3c4;
+    --muted:#5b6b76;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Iowan Old Style','Georgia',serif;
+    line-height:1.65;
+  }
+  h1,h2,h3,.brand-word{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    letter-spacing:-0.01em;
+  }
+  a{color:var(--hp-blue-deep);}
+
+  /* NAVBAR */
+  .navbar{
+    position:sticky;top:0;z-index:50;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 32px;
+    background:var(--ink);
+    border-bottom:3px solid var(--hp-blue);
+  }
+  .logo-corner{
+    display:flex;align-items:center;gap:10px;
+  }
+  .logo-mark{
+    width:38px;height:38px;border-radius:8px;
+    background:linear-gradient(135deg,var(--hp-blue),var(--hp-blue-deep));
+    display:flex;align-items:center;justify-content:center;
+    font-family:Arial,sans-serif;font-weight:800;color:#fff;font-size:15px;
+    flex-shrink:0;
+  }
+  .logo-image{
+    width: 50px;
+    height: 50px;
+  }
+  .logo-text{
+    color:#fff;font-family:Arial,sans-serif;font-weight:700;font-size:15px;
+    line-height:1.1;
+  }
+  .logo-text span{display:block;font-size:10px;font-weight:400;color:#9fb3c2;letter-spacing:.04em;}
+  .nav-links{
+    display:flex;gap:28px;font-family:Arial,sans-serif;font-size:14px;
+  }
+  .nav-links a{
+    color:#cfe0ec;text-decoration:none;font-weight:500;
+    padding:6px 0;border-bottom:2px solid transparent;
+    transition:border-color .2s, color .2s;
+  }
+  .nav-links a:hover{color:#fff;border-color:var(--accent);}
+  @media (max-width:680px){.nav-links{display:none;}}
+
+  /* HERO */
+  .hero{
+    padding:64px 32px 56px;
+    max-width:880px;margin:0 auto;
+    text-align:left;
+  }
+  .eyebrow{
+    font-family:Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--accent);margin-bottom:14px;
+  }
+  .hero h1{
+    font-size:clamp(32px,5vw,52px);
+    font-weight:800;margin:0 0 18px;color:var(--ink);
+    line-height:1.08;
+  }
+  .hero h1 em{
+    font-style:normal;color:var(--hp-blue-deep);
+  }
+  .hero p.lede{
+    font-size:19px;color:var(--muted);max-width:620px;margin:0;
+  }
+  .hero-rule{
+    height:1px;background:var(--line);margin:40px 0 0;
+  }
+
+  .wrap{max-width:880px;margin:0 auto;padding:0 32px;}
+
+  section{padding:48px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+
+  h2.section-title{
+    font-size:28px;font-weight:800;margin:0 0 6px;color:var(--ink);
+  }
+  .section-sub{
+    font-size:15px;color:var(--muted);font-family:Arial,sans-serif;margin:0 0 26px;
+  }
+
+  h3.step-heading{
+    font-size:20px;font-weight:700;margin:30px 0 8px;color:var(--hp-blue-deep);
+  }
+  h3.step-heading .num{
+    display:inline-block;width:28px;height:28px;border-radius:50%;
+    background:var(--hp-blue);color:#fff;text-align:center;line-height:28px;
+    font-family:Arial,sans-serif;font-size:13px;font-weight:700;margin-right:10px;
+  }
+  p{margin:0 0 14px;}
+  ul{padding-left:20px;margin:0 0 14px;}
+  li{margin-bottom:6px;}
+
+  .callout{
+    background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);
+    padding:16px 20px;border-radius:4px;margin:20px 0;font-family:Arial,sans-serif;font-size:14.5px;color:var(--ink);
+  }
+  .callout strong{color:var(--accent);}
+
+  /* FAQ */
+  details{
+    background:#fff;border:1px solid var(--line);border-radius:6px;
+    margin-bottom:10px;overflow:hidden;
+  }
+  summary{
+    padding:16px 20px;cursor:pointer;font-family:Arial,sans-serif;font-weight:700;
+    font-size:15.5px;color:var(--ink);list-style:none;position:relative;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{
+    content:"+";position:absolute;right:20px;top:14px;font-size:20px;color:var(--hp-blue);
+  }
+  details[open] summary::after{content:"–";}
+  details[open] summary{border-bottom:1px solid var(--line);}
+  .faq-a{padding:14px 20px 18px;font-size:15px;color:var(--muted);}
+
+  .conclusion{
+    background:var(--ink);color:#e9eef1;border-radius:10px;padding:36px;margin:0;
+  }
+  .conclusion h2{color:#fff;margin-top:0;}
+  .conclusion p{color:#c4d2da;}
+  .cta-btn{
+    display:inline-block;margin-top:10px;background:var(--hp-blue);color:#fff;
+    font-family:Arial,sans-serif;font-weight:700;font-size:14px;
+    padding:12px 22px;border-radius:6px;text-decoration:none;
+  }
+  .cta-btn:hover{background:var(--hp-blue-deep);}
+
+  footer{
+    background:var(--ink);color:#9fb3c2;padding:40px 32px 28px;font-family:Arial,sans-serif;
+  }
+  .footer-inner{max-width:880px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;}
+  .footer-col h4{color:#fff;font-size:14px;margin:0 0 12px;}
+  .footer-col a{display:block;color:#9fb3c2;text-decoration:none;font-size:13.5px;margin-bottom:8px;}
+  .footer-col a:hover{color:#fff;}
+  .footer-bottom{
+    max-width:880px;margin:28px auto 0;padding-top:18px;border-top:1px solid #33424d;
+    font-size:12.5px;text-align:center;color:#6f8492;
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo-corner">
+    <!-- <div class="logo-mark"> <img src="logo.png" alt="logo">
+    <span class="logo-text">123.hp.com install</span> -->
+<!-- </div> -->
+    <div class="logo-mark"><img class="logo-image" src="logo.png" alt="123hpinstall"></div>
+    <div class="logo-text">123.hp.com install<span>Install &amp; Setup Guide</span></div> -->
+  </div>
+
+
+  <div class="nav-links">
+    <a href="#intro">Introduction</a>
+    <a href="#steps">Setup Steps</a>
+    <a href="#faq">FAQ</a>
+    <a href="#conclusion">Conclusion</a>
+  </div>
+</nav>
+
+<header class="hero" id="intro">
+  <div class="eyebrow">Beginner's Guide</div>
+  <h1>Your Complete Beginner's Roadmap to <em>HP Printer Setup</em> via 123.hp.com Install</h1>
+  <p class="lede">New printer, new box, a dozen cables — and no idea where to start? This guide walks you through the entire <strong>123.hp.com install</strong> process step by step, so your HP printer is unboxed, connected, and printing in under twenty minutes.</p>
+  <div class="hero-rule"></div>
+</header>
+
+<main class="wrap">
+
+  <section id="introduction">
+    <h2 class="section-title">Introduction</h2>
+    <p class="section-sub">Why 123.hp.com is the only place you need to start</p>
+    <p>Setting up a new printer used to mean digging through a driver CD that nobody owns a CD drive for anymore. HP fixed that with <strong>123.hp.com</strong> — a single web address that detects your printer model, downloads the correct driver, and walks you through Wi-Fi setup automatically.</p>
+    <p>Whether you've just unboxed an HP DeskJet, OfficeJet, ENVY, LaserJet, or Smart Tank printer, the <strong>123.hp.com install</strong> wizard is built for people who have never set up a printer before. No technical background needed — just your printer, your computer or phone, and a working internet connection.</p>
+    <div class="callout"><strong>Quick tip:</strong> Keep your printer powered on and within reach of your Wi-Fi router before you begin. Most setup hiccups happen simply because the printer is too far from the signal.</div>
+  </section>
+
+  <section id="steps">
+    <h2 class="section-title">Setting Up Your HP Printer, Step by Step</h2>
+    <p class="section-sub">From unboxing to your first printed page</p>
+
+    <h3 class="step-heading"><span class="num">1</span>Unbox and power on the printer</h3>
+    <p>Remove all packing tape, foam inserts, and the strip of plastic film covering the control panel. Plug in the power cable and press the power button. Let the printer fully initialize — it will usually prompt you on its own screen to choose a language and country.</p>
+
+    <h3 class="step-heading"><span class="num">2</span>Install the ink or toner cartridges</h3>
+    <p>Open the cartridge access door, remove the orange tape and caps from each cartridge, and slot them in until you hear a click. Close the door and let the printer run its automatic alignment page — this is normal and only takes a minute.</p>
+
+    <h3 class="step-heading"><span class="num">3</span>Go to 123.hp.com on your browser</h3>
+    <p>On the computer or phone you'll be printing from, open a browser and type <strong>123.hp.com</strong> directly into the address bar — not a search engine. The site will ask for your printer's model number, found on a sticker on the front or inside the cartridge door.</p>
+
+    <h3 class="step-heading"><span class="num">4</span>Download HP Smart or the setup software</h3>
+    <p>123.hp.com will detect your operating system and offer the correct download — usually the <strong>HP Smart app</strong> for Windows, Mac, iOS, or Android. Download and open it once it finishes installing.</p>
+
+    <h3 class="step-heading"><span class="num">5</span>Connect your printer to Wi-Fi</h3>
+    <p>The setup software will scan for nearby printers. Select yours from the list, then choose your home Wi-Fi network and enter the password when prompted. The printer's display will confirm once it's successfully connected.</p>
+
+    <h3 class="step-heading"><span class="num">6</span>Print a test page</h3>
+    <p>Once setup finishes, the app will offer to print a test page. Do this — it confirms the driver, Wi-Fi connection, and ink levels are all working correctly before you move on to your actual documents.</p>
+
+    <div class="callout"><strong>Stuck along the way?</strong> Restarting both the printer and your router resolves the majority of connection failures during 123.hp.com install. Try this before anything else.</div>
+  </section>
+
+  <section id="faq">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-sub">Quick answers to common 123.hp.com install questions</p>
+
+    <details>
+      <summary>What is 123.hp.com used for?</summary>
+      <div class="faq-a">It's HP's official setup portal that identifies your printer model and provides the correct drivers and software, including the HP Smart app, so you can install and connect your printer without searching for files manually.</div>
+    </details>
+
+    <details>
+      <summary>Do I need to create an HP account?</summary>
+      <div class="faq-a">An account isn't required to install your printer, but signing up does let you register your warranty, order ink, and manage multiple printers from one dashboard later on.</div>
+    </details>
+
+    <details>
+      <summary>My printer isn't showing up during setup. What should I do?</summary>
+      <div class="faq-a">Make sure the printer and your computer or phone are on the same Wi-Fi network, then restart the printer. If it still doesn't appear, try moving the printer closer to the router and run the search again.</div>
+    </details>
+
+    <details>
+      <summary>Can I set up my printer using just my phone?</summary>
+      <div class="faq-a">Yes. The HP Smart app is available for both iOS and Android, and it supports the full setup process — driver installation, Wi-Fi connection, and test printing — without needing a computer at all.</div>
+    </details>
+
+    <details>
+      <summary>Is 123.hp.com install free?</summary>
+      <div class="faq-a">Yes, the setup software and drivers from 123.hp.com are completely free. You only pay for ink, toner, or any optional HP+ subscription services you choose to add later.</div>
+    </details>
+  </section>
+
+  <section id="conclusion">
+    <div class="conclusion">
+      <h2>Conclusion</h2>
+      <p>The 123.hp.com install process was built so that anyone — regardless of technical experience — can go from a sealed printer box to a working, Wi-Fi-connected device in just a handful of steps. Unbox, power on, visit 123.hp.com, install the HP Smart app, connect to your network, and print your first page. That's the entire roadmap.</p>
+      <p>Bookmark this guide so it's ready the next time you set up a new HP printer, gift one to family, or troubleshoot a connection drop.</p>
+      <a class="cta-btn" href="https://123.hp.com" target="_blank" rel="noopener">Start Your Setup at 123.hp.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>123.hp.com Install Guide</h4>
+      <a href="#intro">Introduction</a>
+      <a href="#steps">Setup Steps</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="#">HP Smart App</a>
+      <a href="#">Printer Troubleshooting</a>
+      <a href="#">Ink &amp; Toner Guide</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a href="#">Contact Us</a>
+      <a href="#">Wi-Fi Connection Help</a>
+      <a href="#">Driver Downloads</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    This is an independent guide and is not officially affiliated with HP Inc. &middot; &copy; 2026 123.hp.com Install Guide
+  </div>
+</footer>
+
+</body>
+</html>
