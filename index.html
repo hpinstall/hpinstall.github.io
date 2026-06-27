@@ -100,6 +100,14 @@
   .hero p.lede{
     font-size:19px;color:var(--muted);max-width:620px;margin:0;
   }
+  .hero-cta{
+    display:inline-block;background:var(--hp-blue);color:#fff;
+    font-family:Arial,sans-serif;font-weight:700;font-size:15px;
+    padding:14px 28px;border-radius:6px;text-decoration:none;
+    box-shadow:0 4px 14px rgba(15,108,189,0.28);
+    transition:background .2s, transform .15s;
+  }
+  .hero-cta:hover{background:var(--hp-blue-deep);transform:translateY(-1px);}
   .hero-rule{
     height:1px;background:var(--line);margin:40px 0 0;
   }
@@ -199,6 +207,7 @@
 <header class="hero" id="intro">
   <div class="eyebrow">Beginner's Guide</div>
   <h1>Your Complete Beginner's Roadmap to <em>HP Printer Setup</em> via 123.hp.com Install</h1>
+  <a class="hero-cta" href="https://123.hp.com" target="_blank" rel="noopener">Start Your Setup at 123.hp.com</a>
   <p class="lede">New printer, new box, a dozen cables — and no idea where to start? This guide walks you through the entire <strong>123.hp.com install</strong> process step by step, so your HP printer is unboxed, connected, and printing in under twenty minutes.</p>
   <div class="hero-rule"></div>
 </header>
